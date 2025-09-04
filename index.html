@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proycto de Validacion de Formulario</title>
+    <title>Proyecto de Validacion de Formulario</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -23,7 +23,7 @@
             <br />
 
             <label for="documento">Documento:</label>
-            <input type="text" id="documento" name="documento" required autocomplete="off" minlength="7" maxlength="8" oninput="if(this.value.length > 8) this.value = this.value.slice(0,8);" />
+            <input type="text" id="documento" name="documento" required autocomplete="off" minlength="7" maxlength="8" pattern="\d{7,8}" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
             <div class="error" id="errorDocumento"></div>
             <br />
 
