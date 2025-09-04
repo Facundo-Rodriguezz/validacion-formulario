@@ -96,7 +96,7 @@ input[type="checkbox"] {
 #publicidad, #novedades {
     accent-color: #94adaa; /* color moderno al tildar */
     width: auto;
-    margin-right: 6px;
+    margin-right: auto;
 }
 
 /* =======================
