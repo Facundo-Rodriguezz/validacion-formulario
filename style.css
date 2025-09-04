@@ -93,6 +93,11 @@ input[type="checkbox"] {
     margin-right: 6px;
     accent-color: #94adaa; /* color moderno al tildar */
 }
+#publicidad, #novedades {
+    accent-color: #94adaa; /* color moderno al tildar */
+    width: auto;
+    margin-right: 6px;
+}
 
 /* =======================
    Botones

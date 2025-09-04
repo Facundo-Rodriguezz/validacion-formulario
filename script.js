@@ -69,10 +69,6 @@ function validarFormulario() {
         ocultarError(errorEdad)
     }
 
-    // Validación de DNI
-
-
-
     // Validación de DNI (debe tener exactamente 8 números)
     const documento = document.getElementById('documento');
     const errorDocumento = document.getElementById('errorDocumento');
