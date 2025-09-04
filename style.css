@@ -1,0 +1,158 @@
+/* =======================
+   Variables de color
+   ======================= */
+:root {
+    --color-bg: linear-gradient(245.59deg, #1a0aac 0%, #7778b0 25%, #1b152c 75%);
+    --color-form-bg: rgba(255, 255, 255, 0.1); /* más glass effect */
+    --color-form-text: #fff;
+    --color-border: rgba(255, 255, 255, 0.25);
+    --color-btn-bg: #ffffff30;
+    --color-btn-hover: rgba(255, 255, 255, 0.4);
+    --color-btn-reset-hover: rgba(255, 255, 255, 0.25);
+    --color-error: #ff4d4d;
+}
+
+/* =======================
+   Estilos generales
+   ======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg);
+}
+
+/* =======================
+   Formulario
+   ======================= */
+#registroForm {
+    background-color: var(--color-form-bg);
+    color: var(--color-form-text);
+    padding: 10px 12px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    margin: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* =======================
+   Etiquetas y campos
+   ======================= */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+label.inline {
+    display: inline-block;
+    font-weight: normal;
+}
+
+input,
+select {
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #000000;
+    width: 100%;
+    transition: border 0.3s, box-shadow 0.3s, background 0.3s;
+    outline: none;
+}
+
+/* =======================
+   Focus visual
+   ======================= */
+input:focus,
+select:focus {
+    border-color: #94adaa;
+    box-shadow: 0 0 8px rgba(148, 173, 170, 0.6);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* =======================
+   Checkbox y radio
+   ======================= */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    accent-color: #94adaa; /* color moderno al tildar */
+}
+
+/* =======================
+   Botones
+   ======================= */
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--color-btn-bg);
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-btn-hover);
+    color: #222;
+    transform: translateY(-2px);
+}
+
+input[type="reset"]:hover {
+    background-color: var(--color-btn-reset-hover);
+    color: #222;
+    transform: translateY(-2px);
+}
+
+/* =======================
+   Mensajes de error
+   ======================= */
+.error {
+    color: var(--color-error);
+    font-size: 12px;
+    margin-bottom: 8px;
+    min-height: 18px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+/* =======================
+   Responsive
+   ======================= */
+@media (max-width: 600px) {
+    #registroForm {
+        max-width: 95vw;
+        padding: 16px 6vw;
+    }
+
+    input,
+    select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 12px;
+    }
+}
